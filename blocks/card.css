@@ -3,22 +3,25 @@
   width: 100%;
   object-fit: cover;
   display: block;
+  border-radius: 2%;
 }
 
 .card__content {
   display: flex;
+  margin: 0;
   align-items: center;
   justify-content: space-between;
 }
 
 .card__title {
+  margin: 12px 0;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  font-family: Poppins;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
   font-size: 20px;
-  font-weight: 500;
   line-height: 24px;
+  max-width: 413px;
 }
 
 .card__like-btn {
@@ -38,5 +41,10 @@
 @media screen and (max-width: 627px) {
   .card__image {
     height: 288px;
+  }
+  .card__title {
+    max-width: 268px;
+    font-size: 16px;
+    line-height: 16px;
   }
 }
