@@ -16,7 +16,7 @@ In this project I have tried to do first steps of developing an responsive image
 
 This website is deployed to Github Pages
 
-- [Deployment link] (https://rafieymehr.github.io/se_project_spots/)
+- [Deployment link] (git )
 
 ## Viedo File
 
