@@ -18,16 +18,17 @@
 
 .profile__name {
   margin: 0 0 12px;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
   max-width: 420px;
   font-family: Poppins, Arial, Helvetica, sans-serif;
   font-size: 32px;
   font-weight: 500;
   line-height: 32px;
+  color: #212121;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 
 .profile__description {
@@ -36,6 +37,7 @@
   font-size: 16px;
   font-weight: 500;
   line-height: 16px;
+  color: #212121b2;
   text-overflow: ellipsis;
   overflow: hidden;
   display: -webkit-box;
@@ -59,26 +61,28 @@
 }
 
 .profile__add-btn:hover {
+  color: ;
   background: #212121cc;
   cursor: pointer;
 }
 
 .profile__edit-btn {
   display: flex;
+  padding: 0;
   gap: 8px;
-  align-items: center;
   margin-top: auto;
   background-color: transparent;
   font-family: Poppins, Arial, Helvetica, sans-serif;
   font-size: 16px;
   font-weight: 500;
   line-height: 16px;
-  opacity: 70%;
+  color: #212121;
+  opacity: 0.7;
   border-style: none;
 }
 
 .profile__edit-btn:hover {
-  opacity: 100%;
+  opacity: 1;
   cursor: pointer;
 }
 
@@ -100,6 +104,10 @@
   .profile__add-btn {
     margin: 0;
     width: 100%;
+  }
+
+  .profile__edit-btn {
+    justify-content: center;
   }
 
   .profile__name {
