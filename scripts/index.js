@@ -23,4 +23,18 @@ const initialCards =
     name: "Mountain house",
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/6-photo-by-moritz-feldmann-from-pexels.jpg",
   });
-console.log(initialCards);
+
+let profileEditBotton = document.querySelector(".profile__edit-btn");
+let modalCloseBotton = document.querySelector(".modal__close-btn");
+let editProfileModal = document.querySelector(".modal");
+
+function openModal() {
+  editProfileModal.classList.add("modal_opened");
+}
+
+function closeModal() {
+  editProfileModal.classList.remove("modal_opened");
+}
+
+profileEditBotton.addEventListener("click", openModal);
+modalCloseBotton.addEventListener("click", closeModal);
