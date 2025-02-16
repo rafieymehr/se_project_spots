@@ -43,15 +43,12 @@ let cardsList = document.querySelector("cards__list");
 function getCardElement(data) {
   // cardTemplate is the content of the template element.
   const cardTemplate = document.querySelector("#card-template").content;
-
   // cardElement is the element we want to add to the DOM.
   const cardElement = cardTemplate.querySelector(".card").cloneNode(true);
-
   // Populate the cloned element with card data.
   cardElement.querySelector(".card__image").src = data.link;
   cardElement.querySelector(".card__image").alt = data.name + "  Image";
   cardElement.querySelector(".card__title").textContent = data.name;
-
   return cardElement;
 }
 
