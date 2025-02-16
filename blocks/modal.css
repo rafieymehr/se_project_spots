@@ -19,12 +19,14 @@
 
 .modal__container {
   background-color: #fff;
+  top: 207px;
   padding: 32px 50px;
-  max-width: 730px;
-  position: relative;
   width: 100%;
+  max-width: 730px;
+  position: fixed;
   box-sizing: border-box;
   border-radius: 8px;
+}
 
 .modal__close-btn {
   position: absolute;
@@ -100,7 +102,9 @@
   }
 
   .modal__container {
-    padding: 12px;
+    top: 134px;
+    width: 300px;
+    padding: 10px;
   }
 
   .modal__title {
