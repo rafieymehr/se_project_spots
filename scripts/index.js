@@ -79,5 +79,4 @@ formElement.addEventListener("submit", handleProfileFormSubmit);
 for (let i = 0; i < initialCards.length; i++) {
   const cardslist = document.querySelector(".cards__list");
   cardslist.append(getCardElement(initialCards[i]));
-  console.log(cardslist);
 }
