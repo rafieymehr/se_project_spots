@@ -25,32 +25,24 @@ const initialCards = [
   },
 ];
 
-let profileEditBotton = document.querySelector(".profile__edit-btn");
-let modalCloseBotton = document.querySelector(".modal__close-btn");
-let editProfileModal = document.querySelector(".modal");
-let formElement = document.querySelector(".modal__form");
-
-let profileName = document.querySelector(".profile__name");
-let profileDescription = document.querySelector(".profile__description");
-
-let modalName = document.querySelector("#modal-name-input");
-let modalDescription = document.querySelector("#modal-description-input");
-
-let cardTemplate = document.querySelector("#card-template").content;
-
-let cardsList = document.querySelector("cards__list");
+const profileEditBotton = document.querySelector(".profile__edit-btn");
+const modalCloseBotton = document.querySelector(".modal__close-btn");
+const editProfileModal = document.querySelector(".modal");
+const formElement = document.forms["modal-form"];
+const profileName = document.querySelector(".profile__name");
+const profileDescription = document.querySelector(".profile__description");
+const modalName = document.querySelector("#modal-name-input");
+const modalDescription = document.querySelector("#modal-description-input");
+const cardTemplate = document.querySelector("#card-template").content;
+const cardsList = document.querySelector(".cards__list");
 
 function getCardElement(data) {
-  // cardTemplate is the content of the template element.
   const cardTemplate = document.querySelector("#card-template").content;
-
-  // cardElement is the element we want to add to the DOM.
   const cardElement = cardTemplate.querySelector(".card").cloneNode(true);
-
-  // Populate the cloned element with card data.
-  cardElement.querySelector(".card__image").src = data.link;
-  cardElement.querySelector(".card__image").alt = data.name + "  Image";
+  const cardImage = cardElement.querySelector(".card__image");
   cardElement.querySelector(".card__title").textContent = data.name;
+  cardImage.src = data.link;
+  cardImage.alt = data.name + "  Image";
   return cardElement;
 }
 
@@ -76,6 +68,5 @@ modalCloseBotton.addEventListener("click", closeModal);
 formElement.addEventListener("submit", handleProfileFormSubmit);
 
 for (let i = 0; i < initialCards.length; i++) {
-  const cardslist = document.querySelector(".cards__list");
-  cardslist.append(getCardElement(initialCards[i]));
+  cardsList.append(getCardElement(initialCards[i]));
 }
